@@ -1,0 +1,178 @@
+Package: fangfrisch
+Architecture: all
+Version: 1.9.3-0shdefender2
+Priority: optional
+Section: admin
+Maintainer: Security Hub Defender Maintainers <security-hub-defender@users.noreply.github.com>
+Installed-Size: 92
+Depends: python3-requests, python3-sqlalchemy (>= 1.4.0), python3:any, clamav-base, clamav-daemon, clamdscan
+Filename: ./fangfrisch_1.9.3-0shdefender2_all.deb
+Size: 15084
+MD5sum: 488a7a9f43ffbeaa427a60c8bb62f434
+SHA1: 896f50943888dc9f052a9466819e10f5d1c2413d
+SHA256: af7fadf87dd077a821dfd986a37adfe988345b9d2f0b67e0ed071df9c052b939
+SHA512: 1179ea7bf9ccf6b9ad71ea11ca652feffbc5fad6e80b5fdf6cbe0a87e7fad85686a003c1cfd12abab217636050547e2716f00dc1e52a80d8055758419d675951
+Homepage: https://github.com/rseichter/fangfrisch
+Description: third-party ClamAV signature updater
+ Fangfrisch downloads and verifies unofficial ClamAV signature databases
+ (URLhaus, Sanesecurity, SecuriteInfo and others) into the ClamAV database
+ directory and asks clamd to reload. This build is packaged for Security Hub
+ Defender with a conservative default provider set and an hourly systemd
+ timer running as the clamav user.
+
+Package: libyara-x-capi1
+Architecture: amd64
+Version: 1.22.0-0shd1
+Multi-Arch: same
+Priority: optional
+Section: libs
+Source: yara-x
+Maintainer: Security Hub Defender Maintainers <security-hub-defender@users.noreply.github.com>
+Installed-Size: 24812
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 4.2)
+Filename: ./libyara-x-capi1_1.22.0-0shd1_amd64.deb
+Size: 6419426
+MD5sum: 135801aea9c52ff8275969a8093c2e1a
+SHA1: c3b46e5414cea496e8fbc66b036d82009f728b9d
+SHA256: 4d5ae387e5090e28f8c0179b5aebef220dba3b5c768aff707124bdaadc9b1eae
+SHA512: 6e2e99555441ac7f9e4d74cec1a963118e1e1a60a8939e116f5e7e573e9e12155f3f2506a79130d5e9844246ba7d1c098e7297704806f9496c21a48e4a726fe5
+Homepage: https://virustotal.github.io/yara-x/
+Description: YARA-X pattern matching library (C API, shared library)
+ YARA-X is a rewrite of YARA in Rust. This package carries the shared
+ library of its C API, used by Security Hub Defender to scan files and
+ process memory against YARA rules.
+
+Package: security-hub-firewall-mechanism
+Architecture: all
+Version: 0.5.14
+Priority: optional
+Section: gnome
+Source: security-hub
+Maintainer: phlthydelphya <phlthydelphya@users.noreply.github.com>
+Installed-Size: 287
+Provides: security-center-firewall-mechanism
+Depends: python3:any, adduser, python3-gi, gir1.2-glib-2.0, ufw, nftables, polkitd | policykit-1, dbus, systemd
+Recommends: udisks2, pkexec | policykit-1, cryptsetup-bin, acl, exfatprogs, ntfs-3g, dosfstools
+Conflicts: security-center-firewall-mechanism
+Replaces: security-center-firewall-mechanism
+Filename: ./security-hub-firewall-mechanism_0.5.14_all.deb
+Size: 64012
+MD5sum: 1c8f1ed7a4916cc426bd0cfa6c24572d
+SHA1: bd9f0cf0318abbbbf4660529810df54c61f943d0
+SHA256: bfe5cf3432d13daff5415be14395c90693202e6127db8b80e05269a2dca48d4d
+SHA512: 25108c435050babb68a1804298666e675a27d8a58261ee3c7aeca4a179e2e91c1fe29a9ac7856f050fc3f17c0b9b05ce4e6d4bee5c20acbf8f3125c6e5c57940
+Description: Root D-Bus mechanism for Warden Hub UFW controls
+ Narrow system service exposing GetStatus and SetEnabled on the system bus,
+ guarded by polkit admin authentication. Blocks further changes after an
+ unknown outcome until an administrator clears the marker file under
+ /run/security-hub and restarts the service.
+ .
+ Also ships the drive helpers started through pkexec (encrypt a USB drive
+ with VeraCrypt, change a VeraCrypt password, open an encrypted Mac drive),
+ their polkit actions, and udisks settings that turn on VeraCrypt detection
+ and open Mac drives read-only.
+
+Package: security-hub
+Architecture: all
+Version: 0.5.14
+Priority: optional
+Section: gnome
+Maintainer: phlthydelphya <phlthydelphya@users.noreply.github.com>
+Installed-Size: 913
+Provides: security-center
+Depends: init-system-helpers (>= 1.52), python3:any, python3-gi, gir1.2-gtk-4.0, gir1.2-adw-1 (>= 1.5), gir1.2-glib-2.0, gir1.2-nm-1.0, network-manager, iproute2
+Recommends: security-hub-firewall-mechanism (= 0.5.14), wardenhub (>= 0.2.0), ufw, update-manager, gir1.2-packagekitglib-1.0, packagekit, network-manager-openvpn-gnome, gir1.2-gudev-1.0, udisks2
+Suggests: clamav-daemon, clamav-freshclam, python3-nautilus, apfs-dkms
+Conflicts: security-center
+Replaces: security-center
+Filename: ./security-hub_0.5.14_all.deb
+Size: 199362
+MD5sum: 8f002a7ab9b655283065f3b158fdb57c
+SHA1: 08d824359502bb2b6d2ff3ac25b2d16c4cc717b7
+SHA256: 67bcc7e5db6f891f3348ada0f703bef81220fd81856fa2c296db41b4cf74cf8a
+SHA512: 6067a0ef2e9b22bd8bb9529233b1f2e567ba746659655df1b5076b91f7ae8f4f4eb6706648c104396e0c3bb670581a8b219794ef8b8d26678befcf9c3d9d8b17
+Description: GNOME dashboard for network and device security status
+ Shows NetworkManager connection and VPN state, UFW, AppArmor, Secure Boot,
+ root filesystem encryption and the locally cached update summary. Reports
+ unknown states explicitly instead of guessing.
+ .
+ UFW enable/disable buttons work only when security-hub-firewall-mechanism
+ is installed.
+ .
+ The Devices page (and a Drive menu in Files) unlocks BitLocker, VeraCrypt and
+ LUKS USB drives, opens Mac (APFS) drives, formats, encrypts and ejects.
+
+Package: tetragon
+Architecture: amd64
+Version: 1.7.1+shd1
+Priority: optional
+Section: admin
+Maintainer: Security Hub Defender Maintainers <security-hub-defender@users.noreply.github.com>
+Installed-Size: 260643
+Filename: ./tetragon_1.7.1+shd1_amd64.deb
+Size: 44570968
+MD5sum: c6666fc20cde57b5c3e27e0fb6350e41
+SHA1: 2f74cf7ceb2d3f93f4e5ae34be9e5560d42f5e13
+SHA256: 0811f81ac24c132633eb7c76598a33949cde555a764b38d37d372a517a6d0319
+SHA512: 8d398aae16f0d07d3bf4aca3db013c86a2ce2f476bddff613da1496815f9a2d10e891a62a798318d7fb0cbcb68644d0905680f4082b3de8cf77effbacdc6b6c9
+Homepage: https://tetragon.io/
+Description: eBPF-based security observability and runtime enforcement
+ Tetragon observes process execution, system calls and kernel functions
+ through eBPF and streams the events over gRPC. Security Hub Defender
+ consumes the stream for its behavioral detections. This package carries
+ the upstream release binaries (tetragon, tetra) and BPF objects.
+
+Package: wardenhub-archive
+Architecture: all
+Version: 1
+Priority: optional
+Section: admin
+Maintainer: Warden Hub Maintainers <security-hub-defender@users.noreply.github.com>
+Installed-Size: 38
+Depends: apt (>= 2.4)
+Filename: ./wardenhub-archive_1_all.deb
+Size: 7158
+MD5sum: bb930d53ba0de13ff615f3e114abaa2a
+SHA1: bbc46eaf348f520b8887725e376146b21302eb23
+SHA256: 9ce4c86c72d2fe6583a4a3b40c4dc52e356cbe0ebd4e814fc8934ebd3f2132c0
+SHA512: a2c265ed834e039ea406e6c1c5b626ab2e1d4b78b18aa91cf0dbd768f6cd6998114e2a8a966640a0b977a1fc255e3aefc67dc60919da050b09db9c703b551ef5
+Homepage: https://github.com/phlthydelphya/wardenhub
+Description: Warden Hub repository setup and first install
+ Adds the signed Warden Hub APT repository (its public key, a sources
+ entry and an unattended-upgrades origin), then installs the Warden Hub
+ engine, the Warden Hub app and its firewall mechanism from it once the
+ current package transaction has finished.
+ .
+ This is the only file a new user downloads. Progress and any failure are
+ recorded in /var/lib/wardenhub-archive/first-install.json for the app.
+
+Package: wardenhub
+Architecture: amd64
+Version: 0.2.2
+Priority: optional
+Section: admin
+Maintainer: Warden Hub Maintainers <security-hub-defender@users.noreply.github.com>
+Installed-Size: 58054
+Depends: libc6 (>= 2.34), libyara-x-capi1 (>= 1.22.0), init-system-helpers (>= 1.52), adduser, apparmor, clamav-daemon, clamav-freshclam, dbus, tetragon (>= 1.7.1)
+Recommends: fangfrisch, libnotify-bin, security-hub (>= 0.5.14)
+Suggests: fapolicyd
+Conflicts: shdefender
+Breaks: security-hub (<< 0.5.14)
+Replaces: shdefender
+Filename: ./wardenhub_0.2.2_amd64.deb
+Size: 19447678
+MD5sum: 223409ff6d2d01ca13070298f7a6ac5b
+SHA1: a47fe224260f792eb6456a01cd29dae31c9b3b9e
+SHA256: 468093be1b752734a079bcbdb288a3225d0722162b4514bec098856ad35456a1
+SHA512: 5886f011b97488ec05b5f975c4a388e8026752f80cf3f3640b84d8927189e755c992a49565c9569589a73e90bde7aee3d285f8e79ce25ef41e8e934c45f32fd7
+Homepage: https://github.com/phlthydelphya/wardenhub
+Description: endpoint protection agent (real-time anti-malware and lightweight EDR)
+ Warden Hub combines ClamAV, YARA-X, package integrity checks and
+ Tetragon behavioral detection behind one daemon with a single scoring engine
+ and response tiers (log, alert, quarantine, kill). It is built for
+ Ubuntu-based distributions and selects a hardware profile (full, lite, thin)
+ at install time.
+ .
+ This package provides wardenhubd (the daemon), wardenhubctl (the CLI), the
+ systemd unit, AppArmor profile and default configuration.
+

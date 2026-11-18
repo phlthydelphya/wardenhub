@@ -1,0 +1,36 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Architectures: amd64 all
+Date: Wed, 18 Nov 2026 22:51:31 +0000
+Description: Warden Hub endpoint protection
+Label: Warden Hub
+Origin: Warden Hub
+Suite: stable
+MD5Sum:
+ b1708a6842e01783ec6a4cb30dac0ff6             8621 Packages
+ 65d0476268b66424bed0fe27052f3b42             3874 Packages.gz
+ 4ee4c8acccfeec89d3dce2ba3958eae4             3840 Packages.xz
+ d091e5903e52ef342f2300d7c86378ec              158 Release
+SHA1:
+ 365cd6d45a64b57f8b9f10da36b7a2539a120480             8621 Packages
+ 98477c9cdab33b817a066deeb44f8e8cace87490             3874 Packages.gz
+ 84a2f46b0d2fd453fb8d0956c2281dcafcd614bb             3840 Packages.xz
+ 21775e9fae43640b4daa66628fcda9bb02d6083d              158 Release
+SHA256:
+ b417dad2f0e7f65c3b9754f05115c47bda0c9a3159fee5d4f4b980c1a328a352             8621 Packages
+ d08e2cdfde42db241e4ed5a8c341b69b54c624f53b21386571cc406d83b38db7             3874 Packages.gz
+ 666498966e5927117aa306321585fe49bcf0bf90eb53fa891210c1fa8e6eb076             3840 Packages.xz
+ 595cb36e967c4ed90d3750b27963904092e5955548aecbacc94bfcae18d946eb              158 Release
+SHA512:
+ 56f36de55d0963b1a6d67e4dd9baf34431ffa32ff3c178f6c9ffb8c714ddfa393fb32f8f1ef78b8ff1fe0edb819324a1558da3ecf565dc99c6e7cb69df3cd4c0             8621 Packages
+ 055144600e4a4a597d2590555ec9fa3b64a87f5f11942b3b54506e11a4e90d114967c49ba25ccc014733823b44ab3ab0e86399276e51dd9484e5397d0488a8f5             3874 Packages.gz
+ 3d141ab6073c8471e996d697ca9d70b725036cf03ace3fd69163ec63b2749551dcb9ad822116acfdb649e48f23eea9893f64efb9cb633fbde501fd527814e1fd             3840 Packages.xz
+ 87e698487c4752be48c8520553f80c53891dbd1e21bc9e92cc3e9f85759fa338079080f42b0e858a23e4e1990d472bcd1340176b67a87da632e63c3ab83f0151              158 Release
+-----BEGIN PGP SIGNATURE-----
+
+iHUEARYKAB0WIQQtrl5aNizQxbOtjB6icxO25JaKBAUCav4r8wAKCRCicxO25JaK
+BKwvAP47qbkD8mupNRutgersXlKZy3IhoJxo8OAEIIUi7hKQBQEApe78vQZWC2K3
+OgKEmxefTn8gfMoI8+b5LwKahpIldQw=
+=sXd6
+-----END PGP SIGNATURE-----
