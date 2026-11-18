@@ -1,0 +1,18 @@
+# Warden Hub APT repository
+
+This repository will serve the signed APT repository for Warden Hub, an endpoint
+protection agent for Ubuntu with a GNOME app. It holds no source code.
+
+Nothing is published yet. The first packages arrive with release 0.2.2.
+
+## Signing key
+
+Every release is signed by the Warden Hub archive key:
+
+```
+2DAE 5E5A 362C D0C5 B3AD  8C1E A273 13B6 E496 8A04
+```
+
+ed25519, sign only, expires 2029-11-17. The `wardenhub-archive` package installs
+this key, the sources entry and the update origin. Do not trust a repository that
+is signed by any other key.
