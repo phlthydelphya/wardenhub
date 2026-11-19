@@ -44,7 +44,7 @@ Description: YARA-X pattern matching library (C API, shared library)
 
 Package: security-hub-firewall-mechanism
 Architecture: all
-Version: 0.5.14
+Version: 0.5.15
 Priority: optional
 Section: gnome
 Source: security-hub
@@ -55,12 +55,12 @@ Depends: python3:any, adduser, python3-gi, gir1.2-glib-2.0, ufw, nftables, polki
 Recommends: udisks2, pkexec | policykit-1, cryptsetup-bin, acl, exfatprogs, ntfs-3g, dosfstools
 Conflicts: security-center-firewall-mechanism
 Replaces: security-center-firewall-mechanism
-Filename: ./security-hub-firewall-mechanism_0.5.14_all.deb
-Size: 64012
-MD5sum: 1c8f1ed7a4916cc426bd0cfa6c24572d
-SHA1: bd9f0cf0318abbbbf4660529810df54c61f943d0
-SHA256: bfe5cf3432d13daff5415be14395c90693202e6127db8b80e05269a2dca48d4d
-SHA512: 25108c435050babb68a1804298666e675a27d8a58261ee3c7aeca4a179e2e91c1fe29a9ac7856f050fc3f17c0b9b05ce4e6d4bee5c20acbf8f3125c6e5c57940
+Filename: ./security-hub-firewall-mechanism_0.5.15_all.deb
+Size: 64124
+MD5sum: c959e94e6559d46277b258763c47429d
+SHA1: b5182462c270c19e2525e48d22d344371fd77ed4
+SHA256: 6466ded08121f299de65d5d117b7c9f7b7995ef6a9584ceead46227b7402fd9b
+SHA512: 502838c41cdba0a43c36ad775b87a45f8dcd36a86e6079714978ba719c89ffc9f4170cfb29aa9c39442f8460bcb3464857cd5e86dd716ad02705daf62a83f1c0
 Description: Root D-Bus mechanism for Warden Hub UFW controls
  Narrow system service exposing GetStatus and SetEnabled on the system bus,
  guarded by polkit admin authentication. Blocks further changes after an
@@ -74,23 +74,23 @@ Description: Root D-Bus mechanism for Warden Hub UFW controls
 
 Package: security-hub
 Architecture: all
-Version: 0.5.14
+Version: 0.5.15
 Priority: optional
 Section: gnome
 Maintainer: phlthydelphya <phlthydelphya@users.noreply.github.com>
-Installed-Size: 913
+Installed-Size: 914
 Provides: security-center
 Depends: init-system-helpers (>= 1.52), python3:any, python3-gi, gir1.2-gtk-4.0, gir1.2-adw-1 (>= 1.5), gir1.2-glib-2.0, gir1.2-nm-1.0, network-manager, iproute2
-Recommends: security-hub-firewall-mechanism (= 0.5.14), wardenhub (>= 0.2.0), ufw, update-manager, gir1.2-packagekitglib-1.0, packagekit, network-manager-openvpn-gnome, gir1.2-gudev-1.0, udisks2
+Recommends: security-hub-firewall-mechanism (= 0.5.15), wardenhub (>= 0.2.0), ufw, update-manager, gir1.2-packagekitglib-1.0, packagekit, network-manager-openvpn-gnome, gir1.2-gudev-1.0, udisks2
 Suggests: clamav-daemon, clamav-freshclam, python3-nautilus, apfs-dkms
 Conflicts: security-center
 Replaces: security-center
-Filename: ./security-hub_0.5.14_all.deb
-Size: 199362
-MD5sum: 8f002a7ab9b655283065f3b158fdb57c
-SHA1: 08d824359502bb2b6d2ff3ac25b2d16c4cc717b7
-SHA256: 67bcc7e5db6f891f3348ada0f703bef81220fd81856fa2c296db41b4cf74cf8a
-SHA512: 6067a0ef2e9b22bd8bb9529233b1f2e567ba746659655df1b5076b91f7ae8f4f4eb6706648c104396e0c3bb670581a8b219794ef8b8d26678befcf9c3d9d8b17
+Filename: ./security-hub_0.5.15_all.deb
+Size: 199732
+MD5sum: 997953139df130516682b864c1349d27
+SHA1: f8b78ab98e8bf15d7ad1ada0802640f6fc364426
+SHA256: 6c1d1dbc6494f86676fa4df85e5481c71744ecf8e0a6e30b2fac479ead74e5cf
+SHA512: 58361516338dfda1bcec9fba8c7d2254d5284a71fe5ab86119655d5fe2eb1c38230b5e419203b8bc44face891cda8dec7d4ac8644024cfab8c5368e0aad6f1d5
 Description: GNOME dashboard for network and device security status
  Shows NetworkManager connection and VPN state, UFW, AppArmor, Secure Boot,
  root filesystem encryption and the locally cached update summary. Reports
