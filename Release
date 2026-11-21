@@ -1,26 +1,26 @@
 Architectures: amd64 all
-Date: Fri, 20 Nov 2026 09:48:34 +0000
+Date: Sat, 21 Nov 2026 16:34:24 +0000
 Description: Warden Hub endpoint protection
 Label: Warden Hub
 Origin: Warden Hub
 Suite: stable
 MD5Sum:
- 2464913e9c675132201bc76722deeec4             8629 Packages
- 835f2d27222cde501e03603ac1d38d3b             3879 Packages.gz
- 1d8acbbe1f02dfe3402fe6663894cd8f             3840 Packages.xz
- 540e31c10d019212315c3cab378f9fc7              158 Release
+ 070301c8e7f878355deb0d256d9f1f4c             8629 Packages
+ be0626f3965d1e81fc0aca8509f8f7bf             3877 Packages.gz
+ daa6a10c52d383c100392fa4fa5c88aa             3840 Packages.xz
+ 72241914618a1127c7d2280dd23f55ed              158 Release
 SHA1:
- ecafc27330ee293a6af8a16462ee6ddc8c82b29f             8629 Packages
- 25d4ea7f774f62c473627fb60d59ce9505afbef7             3879 Packages.gz
- a32a0b6d48cc7cf7d9311e7df55e217352db68f0             3840 Packages.xz
- 70951716a8ecf301d564af522e45a2e3e9664e93              158 Release
+ bae7a5c80794fbef204826ea5b5187e0d5668959             8629 Packages
+ 5db93f6f1c31fa8adc1680e40479c0a70aac2b00             3877 Packages.gz
+ d09ff681d318a2f319775887f224f6290b070186             3840 Packages.xz
+ 1d57825fff6548565ad8fb6d0a559e1eb07c4995              158 Release
 SHA256:
- cd24f25bf5e5fe146b7497700f119f6823e2bec2bab9e96fbb8bc5bfa51a6b9a             8629 Packages
- f61a4c0838de5079adb6a2bb31a6fe599fec77cc6d8cec41f4a8804f0c7a03d1             3879 Packages.gz
- 83011946fbdd924dbe2a3218adc5ba19febc896e58f31626c3640bf09a34d6da             3840 Packages.xz
- 1ae232c245e5c965195166460e8ae3efd0ff666957ed5f216283413b3755a7ab              158 Release
+ ae0e4681669334227d81f0523ca922440c60ae6db9ee487fa4854fd38f68680a             8629 Packages
+ 502d8281ebfc7deb73a7e468b74b32b53a30d0dd52c73333d81ddc26f89f6390             3877 Packages.gz
+ eac376b04c20ea3c41c8e82f5795b55171cfee5d024b1acbfca49f6746da2a8f             3840 Packages.xz
+ d4e3a238f4445f27abc90b710b4651d47ffb5641018786193f138bfccc11669d              158 Release
 SHA512:
- bd2cb30c7b7eef87b377841fa4ceb32aae26b7c48be1d8dc5beb332bf45cb0b91b42cb4cf50511530db6561387d14361def99937796b8b23bd63cd8d1bf2c635             8629 Packages
- 0614435892351890cfaf90b9fc5d751550c7676c2e4b06f8ad95b1b52690329d5c967ecbbdd950d0745a6f382fc863c6e491ebe03ea2fe232963bb6bb8815db6             3879 Packages.gz
- 7f24f6205d6a4401c8ee456d00c3463afbc1662ff1e333f25a178e9934b31c2e93d11c2a815b2b0e4a1549f7aebaa711c004f225ae86ad2f07ed5637696f0dfe             3840 Packages.xz
- 0679c67a347698afe0dab2ed612e3d739c3da4dff64eb3cb0d951dfe339d259d0a7ca58fc594ccafe4a704631ee1b0ff3e8c63ad7c107a46f2bf0c9fba7b0672              158 Release
+ 9f036492b1b12ea3f8862fbc91c12681c4b664c139bd18a6ec9a40b970cd8b6e1ebe74aa848a151d945d456848038121e35ea82a179e580ce114cf115f605f73             8629 Packages
+ 08215cb21a10fa10521335900eae66ddee5f616f3a5bccd054e6f424c4e167e0fcd22a89444d97bb8d7b2ce0d82b83c755067372c318686a91610bcb3a29c865             3877 Packages.gz
+ 75ea036372db268dd72147fa2d2717d55da9b0bf7d007661c9e828c222dd06e4f4204f3cef57e5f902ffd823d17e1cadcdc5b3e915d3d3369d62c1c1cba06366             3840 Packages.xz
+ d5fc22ece28c4e483f283ba03938b3c10730646b5aa8293950a9078cfcfc819726e3d1dcf56456c3cc8aeffd321de9d4148c5d47a7cf79845cd49433316be567              158 Release

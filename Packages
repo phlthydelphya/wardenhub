@@ -148,23 +148,23 @@ Description: Warden Hub repository setup and first install
 
 Package: wardenhub
 Architecture: amd64
-Version: 0.2.3
+Version: 0.2.4
 Priority: optional
 Section: admin
 Maintainer: Warden Hub Maintainers <security-hub-defender@users.noreply.github.com>
-Installed-Size: 61379
+Installed-Size: 61384
 Depends: libc6 (>= 2.34), libyara-x-capi1 (>= 1.22.0), init-system-helpers (>= 1.52), adduser, apparmor, clamav, clamav-daemon, clamav-freshclam, dbus, tetragon (>= 1.7.1)
 Recommends: fangfrisch, libnotify-bin, security-hub (>= 0.5.14)
 Suggests: fapolicyd
 Conflicts: shdefender
 Breaks: security-hub (<< 0.5.14)
 Replaces: shdefender
-Filename: ./wardenhub_0.2.3_amd64.deb
-Size: 20578626
-MD5sum: 26afaefc0ded7bd829d2cb860399adbd
-SHA1: a4e3a9e8af591bfe667a458f04358f6310aee6a8
-SHA256: 64d5d99d5a32ced281d6a246019eb9fa7b58fd9a52d3024de0685c957790f9ab
-SHA512: 68be5abe3be9a26561380bda37432e7a8be97f94bbf6f2567769473ec5663fe17adf10d5e10b9a20aaa0acd09096ec491731ecbf583cc3de7ecfc5eef9fd5a5b
+Filename: ./wardenhub_0.2.4_amd64.deb
+Size: 20581402
+MD5sum: cdec22a869f833e70700309c31e8b646
+SHA1: b2d86e54fd9d1c70818f5f562658dc45a653ad18
+SHA256: 535e38a886b6d95f844396a72f0af667be4551bd504efe429edde8fb3f679612
+SHA512: 89ecb169e8bcef424d966e2ce621efd9c37e7aa10a7d66ea2359b33b70b838527a157c838daf13ba52d50eb820d3d9a52d415cea28c2a2609b44b8a1b483999e
 Homepage: https://github.com/phlthydelphya/wardenhub
 Description: endpoint protection agent (real-time anti-malware and lightweight EDR)
  Warden Hub combines ClamAV, YARA-X, package integrity checks and
