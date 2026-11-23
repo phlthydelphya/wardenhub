@@ -42,25 +42,52 @@ Description: YARA-X pattern matching library (C API, shared library)
  library of its C API, used by Security Hub Defender to scan files and
  process memory against YARA rules.
 
+Package: linuxre
+Architecture: amd64
+Version: 0.1.0
+Priority: optional
+Section: admin
+Maintainer: LinuxRE Maintainers <291215135+phlthydelphya@users.noreply.github.com>
+Installed-Size: 4296
+Depends: libc6 (>= 2.39), libgcc-s1 (>= 4.2), btrfs-progs, dbus, polkitd
+Filename: ./linuxre_0.1.0_amd64.deb
+Size: 1328742
+MD5sum: df3876e2f8ac2749ab0c7bc0e15c4521
+SHA1: 2dcc5f05763b7e19e3296030d73218ac017d5de5
+SHA256: 692f0b72e52a2f60c217c4bb8b07d7a6b696b3bae8e7448547b8ca3028d29838
+SHA512: 3a7f5d1e1cb1a626eb9e47383ebe00bca5bfaa402c100be596bc6a5d1dc5b731d0237d5bbd0157cfb2f285d1184867b9bb68e3a2b06511cc9f3477c91fd724d7
+Homepage: https://github.com/phlthydelphya/linuxre
+Description: system checkpoints and rollback for a Btrfs root in subvolume @
+ LinuxRE takes read-only Btrfs checkpoints of the root and rolls the root
+ back to one at the next boot, while the home, log and state subvolumes
+ listed in persistent.list stay as they are. Warden Hub, when installed,
+ grades each checkpoint with a signed stamp.
+ .
+ This package provides linuxred (the org.linuxre.Manager1 D-Bus service),
+ the restore and package reconcile helpers, the rollback switch for dracut
+ and initramfs-tools, the APT hook and the polkit action. It activates only
+ on a root in Btrfs subvolume @ with /var/lib/linuxre on @linuxre, and it
+ never converts a layout: on any other root it stays installed and inactive.
+
 Package: security-hub-firewall-mechanism
 Architecture: all
-Version: 0.5.16
+Version: 0.6.0
 Priority: optional
 Section: gnome
 Source: security-hub
 Maintainer: phlthydelphya <phlthydelphya@users.noreply.github.com>
-Installed-Size: 287
+Installed-Size: 297
 Provides: security-center-firewall-mechanism
 Depends: python3:any, adduser, python3-gi, gir1.2-glib-2.0, ufw, nftables, polkitd | policykit-1, dbus, systemd
 Recommends: udisks2, pkexec | policykit-1, cryptsetup-bin, acl, exfatprogs, ntfs-3g, dosfstools
 Conflicts: security-center-firewall-mechanism
 Replaces: security-center-firewall-mechanism
-Filename: ./security-hub-firewall-mechanism_0.5.16_all.deb
-Size: 64188
-MD5sum: fbc02f2b04bcd53c8bf16f27949b7f21
-SHA1: 545f64c8b2d37a46fd4170baec31c59c4278115d
-SHA256: 310e37f02875a6f5cd436280220b006b955a2a6ca3c25f0d8f41805c50cc1924
-SHA512: 847a46c1038e48e4a719823240c5bbbf82e37a4d1ec932f76a7315e269056070ce524e9de180f88a54da4e8f3ef46e6c07a70295a10ab34a50422176a2bdc4c7
+Filename: ./security-hub-firewall-mechanism_0.6.0_all.deb
+Size: 68178
+MD5sum: b7edd3e071d0275cedfd1207e21abf32
+SHA1: 75e5a764f5d3a41dd0e6b51acba2a7f272110cea
+SHA256: ef140fc01ac34299691ab165bc3149584f9645897b2ceec7a44c0b9ce95ba808
+SHA512: 3649c67120c5fd2e16b29d8842aa99539cf6cb2a67241baf11615b7e1728529103d57523f70582fd196c5771ae35555b9f80eadac8aec68f601303cb6e541b02
 Description: Root D-Bus mechanism for Warden Hub UFW controls
  Narrow system service exposing GetStatus and SetEnabled on the system bus,
  guarded by polkit admin authentication. Blocks further changes after an
@@ -74,23 +101,24 @@ Description: Root D-Bus mechanism for Warden Hub UFW controls
 
 Package: security-hub
 Architecture: all
-Version: 0.5.16
+Version: 0.6.0
 Priority: optional
 Section: gnome
 Maintainer: phlthydelphya <phlthydelphya@users.noreply.github.com>
-Installed-Size: 914
+Installed-Size: 1032
 Provides: security-center
 Depends: init-system-helpers (>= 1.52), python3:any, python3-gi, gir1.2-gtk-4.0, gir1.2-adw-1 (>= 1.5), gir1.2-glib-2.0, gir1.2-nm-1.0, network-manager, iproute2
-Recommends: security-hub-firewall-mechanism (= 0.5.16), wardenhub (>= 0.2.0), ufw, update-manager, gir1.2-packagekitglib-1.0, packagekit, network-manager-openvpn-gnome, gir1.2-gudev-1.0, udisks2
+Recommends: security-hub-firewall-mechanism (= 0.6.0), wardenhub (>= 0.3.0), ufw, update-manager, gir1.2-packagekitglib-1.0, packagekit, network-manager-openvpn-gnome, gir1.2-gudev-1.0, udisks2
 Suggests: clamav-daemon, clamav-freshclam, python3-nautilus, apfs-dkms
 Conflicts: security-center
+Breaks: wardenhub (<< 0.3.0)
 Replaces: security-center
-Filename: ./security-hub_0.5.16_all.deb
-Size: 199822
-MD5sum: bbb21572822eb28b449ad45ab6deaed2
-SHA1: b3dd5c0a4c79c8cadc6044057c6d235f151040b1
-SHA256: 83481204618bcc8d59d676902ff6717b7c1b1fdd9e051cc4d2511b9dda44f98e
-SHA512: 17c2659515ce6a899453f39345d4c875ad843dc5ad7441226f5b88cab9845f2dbe43651833659e1fbb627fc522cf18c57e0db5d3d679bb551b34d8a1be71b255
+Filename: ./security-hub_0.6.0_all.deb
+Size: 227272
+MD5sum: fbd909284d8a43062ceb69ed0176aee1
+SHA1: 82bebb7462edd0c63600c21b57ea2c76e7d0e723
+SHA256: b126da0f5ea9536a0800a7ccceb7e92f83740eeac8bc6aa8a2ade2db1acd4881
+SHA512: 8c1bbb60cb7369d0232ea6093dbd3d52ee0ec97aa07217f191b0fcb142ca4cecd3c38ae9c7ab95157e9ac11f875ad60d98feca8e2e8c462be289976810aa6cc6
 Description: GNOME dashboard for network and device security status
  Shows NetworkManager connection and VPN state, UFW, AppArmor, Secure Boot,
  root filesystem encryption and the locally cached update summary. Reports
@@ -148,23 +176,23 @@ Description: Warden Hub repository setup and first install
 
 Package: wardenhub
 Architecture: amd64
-Version: 0.2.4
+Version: 0.3.0
 Priority: optional
 Section: admin
 Maintainer: Warden Hub Maintainers <security-hub-defender@users.noreply.github.com>
-Installed-Size: 61384
+Installed-Size: 61621
 Depends: libc6 (>= 2.34), libyara-x-capi1 (>= 1.22.0), init-system-helpers (>= 1.52), adduser, apparmor, clamav, clamav-daemon, clamav-freshclam, dbus, tetragon (>= 1.7.1)
-Recommends: fangfrisch, libnotify-bin, security-hub (>= 0.5.14)
+Recommends: fangfrisch, libnotify-bin, security-hub (>= 0.6.0)
 Suggests: fapolicyd
 Conflicts: shdefender
-Breaks: security-hub (<< 0.5.14)
+Breaks: security-hub (<< 0.6.0)
 Replaces: shdefender
-Filename: ./wardenhub_0.2.4_amd64.deb
-Size: 20581402
-MD5sum: cdec22a869f833e70700309c31e8b646
-SHA1: b2d86e54fd9d1c70818f5f562658dc45a653ad18
-SHA256: 535e38a886b6d95f844396a72f0af667be4551bd504efe429edde8fb3f679612
-SHA512: 89ecb169e8bcef424d966e2ce621efd9c37e7aa10a7d66ea2359b33b70b838527a157c838daf13ba52d50eb820d3d9a52d415cea28c2a2609b44b8a1b483999e
+Filename: ./wardenhub_0.3.0_amd64.deb
+Size: 20624462
+MD5sum: 18bc1af63a3734c96f3fefe817ef5f8c
+SHA1: 0af90af4f6fc1815f645009da17bb5a97b9f4997
+SHA256: 52f010b793775c607f69866afba563aac5053a7155e1b5b18d239d5a1cc0dc40
+SHA512: 669b36f18b58c60259288e9f2846304040ba7fc092807b074f48d8887acd69c4d43616b09c9477569b3e6becf72f88dc815458343cfa91b8b1da2c918cc3db53
 Homepage: https://github.com/phlthydelphya/wardenhub
 Description: endpoint protection agent (real-time anti-malware and lightweight EDR)
  Warden Hub combines ClamAV, YARA-X, package integrity checks and

@@ -3,9 +3,13 @@
 This repository serves the signed APT repository for Warden Hub, an endpoint
 protection agent for Ubuntu with a GNOME app. It holds no source code.
 
-Current release: 0.2.4. To install, download
+Current release: 0.3.0. To install, download
 [`wardenhub-archive_2_all.deb`](https://phlthydelphya.github.io/wardenhub/wardenhub-archive_2_all.deb)
 and open it in App Center. It adds this repository and installs the rest.
+
+Optional: `linuxre` 0.1.0 rolls the system back to a checkpoint after a failed
+update or an attack. It works only on a Btrfs root with the `@` layout and stays
+inactive on any other root. Warden Hub does not install it.
 
 ## Signing key
 
